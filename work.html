@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #header {
+            background-image: url(./Drawing/背景.png);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <div id="header">
+
+            <!-- 導覽列 -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">主頁</a></li>
+                    <li><a href="about.html">關於我</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">作品 ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="flat.html">平面設計</a></li>
+                            <li><a href="business.html">商業設計</a></li>
+                            <li><a href="zd.html">3D Maya</a></li>
+                            <li><a href="project.html">專案與電繪</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">聯絡方式</a></li>
+                </ul>
+            </nav>
+
+            <div class="section-label fade-in">WORK</div>
+
+            <!-- 作品網格 -->
+            <div class="work-grid fade-in">
+
+                <a href="flat.html" class="work-item">
+                    <p class="p1"><img src="./flat/聖誕-01.png" alt="平面設計"></p>
+                    <div class="info">平面設計</div>
+                </a>
+
+                <a href="business.html" class="work-item">
+                    <p class="p2"><img src="./Business/12-和果子.png" alt="商業設計"></p>
+                    <div class="info">商業設計</div>
+                </a>
+
+                <a href="zd.html" class="work-item">
+                    <p class="p3"><img src="./mamy/03.jpg" alt="3D Maya"></p>
+                    <div class="info">3D Maya</div>
+                </a>
+
+                <a href="project.html" class="work-item">
+                    <p class="p4"><img src="./illustration/10.雙人舞.jpg" alt="專案與電繪"></p>
+                    <div class="info">專案與電繪</div>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // dropdown 功能
+            const dropdown = document.querySelector("nav li.dropdown");
+            const trigger = dropdown.querySelector("a");
+            const menu = dropdown.querySelector(".dropdown-content");
+
+            trigger.addEventListener("click", (e) => {
+                e.preventDefault();
+                menu.style.display = (menu.style.display === "block") ? "none" : "block";
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!dropdown.contains(e.target)) {
+                    menu.style.display = "none";
+                }
+            });
+
+            // fade-in 動畫自動觸發
+            document.querySelectorAll('.fade-in').forEach(el => el.classList.add('show'));
+        });
+    </script>
+
+</body>
+
+</html>

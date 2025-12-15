@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CONTACT - 小說專題</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* 背景 */
+        .contact-header {
+            background: url(./Drawing/背景.png) no-repeat center/cover;
+            padding-bottom: 150px;
+        }
+
+        /* 導覽列 */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 40px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* GET IN TOUCH 粉色標籤 */
+        .section-label {
+            display: inline-block;
+            margin: 40px;
+            padding: 18px 40px;
+            font-size: 38px;
+            font-weight: 700;
+            color: white;
+            background: #ff9ac9;
+            clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+        }
+
+        /* 兩張白色卡片 */
+        .contact-container {
+            width: 100%;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .contact-card {
+            width: 420px;
+            min-height: 520px;
+            background: white;
+            border-radius: 20px;
+
+            /* 修正：改成垂直排版，內容自然換行 */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+
+            padding: 40px;
+            font-size: 20px;
+            color: #333;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+            line-height: 1.7;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .contact-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            margin-bottom: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <div id="header" class="contact-header">
+
+            <!-- 導覽列 -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">主頁</a></li>
+                    <li><a href="about.html">關於我</a></li>
+                    <li><a href="work.html">作品</a></li>
+                    <li><a href="contact.html">聯絡方式</a></li>
+                </ul>
+            </nav>
+
+            <!-- 粉色標籤 -->
+            <div class="section-label">GET IN TOUCH</div>
+
+            <!-- 兩個卡片 -->
+            <div class="contact-container">
+                <div class="contact-card">
+                    <h2>DESIGN</h2>
+                    <p>思考和行動同樣重要，</p>
+                    <p>靈感是稍縱即逝的，要學會抓住那瞬間；
+                        先求有，再求精，不要執著於一點不放。</p>
+                    <p>要多看、多想、多聽；</p>
+                    <p>好的設計是通過不同的創意碰撞出的成果。</p>
+                </div>
+                <div class="contact-card">
+                    <h2>小說和社群連結</h2>
+                    <img src="./img/in novels.png" alt="">
+                    <p>小說(上)</p>
+                    <img src="./img/Next novel.png" alt="">
+                    <p>小說(下)</p>
+                    <img src="./img/gina86712665.png" alt="">
+                    <p>巴哈姆特</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

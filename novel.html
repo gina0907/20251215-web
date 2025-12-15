@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CONTACT - 小說專題</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* 整個頁面背景 */
+        body {
+            margin: 0;
+            font-family: "Noto Sans TC", sans-serif;
+            background: url(./Drawing/背景.png) no-repeat center top;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* 導覽列：統一右上角 */
+        nav {
+            background: transparent;
+            padding: 20px 0;
+            position: absolute;
+            top: 20px;
+            right: 5px;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0 40px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff79c6;
+        }
+
+
+        /* 內容區容器 */
+        main {
+            max-width: 1200px;
+            margin: 100px auto 80px auto;
+            /* 讓內容離 header 有空間，就是你畫的藍色位置 */
+            padding: 0 10%;
+        }
+
+        /* 圖片容器 */
+        .text-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .text-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(225, 114, 175, 0.7);
+            flex: 1 1 300px;
+        }
+
+        /* 手機響應式 */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 20px;
+            }
+
+            .text-box {
+                flex-direction: column;
+                padding: 0 10px;
+            }
+
+            .text-box img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">主頁</a></li>
+                <li><a href="about.html">關於我</a></li>
+                <li><a href="work.html">作品</a></li>
+                <li><a href="contact.html">聯絡方式</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="text-box">
+                <img src="./Topics/15.png" alt="圖片15" />
+                <img src="./Topics/16.png" alt="圖片16" />
+                <img src="./Topics/17.png" alt="圖片17" />
+                <img src="./Topics/18.png" alt="圖片18" />
+                <img src="./Topics/19.png" alt="圖片19" />
+                <img src="./Topics/20.png" alt="圖片20" />
+                <img src="./Topics/21.png" alt="圖片21" />
+                <img src="./Topics/22.png" alt="圖片22" />
+                <img src="./Topics/23.png" alt="圖片23" />
+                <img src="./Topics/24.png" alt="圖片24" />
+            </div>
+        </main>
+
+    </div>
+</body>
+
+</html>
